@@ -1,5 +1,6 @@
 package com.duyle.lab4_kot104_md18309
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -27,6 +28,16 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Bai2Activity : ComponentActivity() {
+
+    override fun onBackPressed() {
+
+        val data = Intent()
+        data.putExtra("data", "Bai 2")
+        setResult(RESULT_OK, data)
+        super.onBackPressed()
+    }
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
